@@ -1,0 +1,3 @@
+include taggit_live/static_taggit_live/js/*
+include taggit_live/static_taggit_live/css/*
+include taggit_live/static_taggit_live/css/images/*

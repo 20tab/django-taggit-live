@@ -6,6 +6,7 @@ http://github.com/alex/django-taggit
    1. You need to have django-taggit already installed
    2. Clone django-taggit-live
    3. Run setup.py to install taggit_live
+      (Alternatively you can use the command: <b><i>pip install django-taggit-live</i></b>)
    4. Add "taggit_live" to installed apps in your project's settings.
    5. Add the following line to your project's urls.py file:
 
