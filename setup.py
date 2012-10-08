@@ -27,7 +27,7 @@ setup(name='django-taggit-live',
     author='20tab srl: Raffaele Colace',
     author_email='info@20tab.com',
     url='https://github.com/20tab/django-taggit-live',
-    license='mit',
+    license='Mit License',
     platforms=['OS Independent'],
     classifiers=[
         #'Development Status :: 5 - Production/Stable',
