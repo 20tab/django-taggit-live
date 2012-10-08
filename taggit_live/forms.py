@@ -7,11 +7,9 @@ from django.core.urlresolvers import reverse
 
 class TaggitLiveWidget(forms.TextInput):
     class Media:
-        css = {'all': ('/static_taggit_live/css/jquery-ui-1.8.24.custom.css',
-                       '/static_taggit_live/css/taggit_live.css',
+        css = {'all': ('/static_taggit_live/css/taggit_live.css',
                        )}
-        js = ('/static_taggit_live/js/jquery-ui-1.8.24.custom.min.js',
-              '/static_taggit_live/js/taggit_live.js',
+        js = ('/static_taggit_live/js/taggit_live.js',
               )
     def render(self, name, value, attrs=None):
         if value is not None and not isinstance(value, basestring):

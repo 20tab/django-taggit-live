@@ -39,7 +39,11 @@ from taggit_live.forms import LiveTagField
 
 class SomeAdmin(admin.ModelAdmin):
     class Media:
-        js = (
+         css = {'all': ('/path_to/jquery-ui-autocomplete.css',
+            			)
+               }
+         js = (
             '/path_to/jquery-lib.js',
-        )
+            '/path_to/jquery-ui-autocomplete.js',
+            )
 ```
