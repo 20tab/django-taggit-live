@@ -1,6 +1,12 @@
 (function($){
 	
-	$.fn.taggit_live = function() {
+	$.fn.taggit_live = function(options) {
+		
+		var config = $.extend({
+			callback:"/taggit_autocomplete_list/",	
+			term_length: 2,
+		},options);
+		
 		function split( val ) {
             return val.split( /,\s*/ );
         }
@@ -17,14 +23,14 @@
             })
             .autocomplete({
                 source: function( request, response ) {
-                    $.getJSON( "/taggit_autocomplete_list/", {
+                    $.getJSON( config.callback, {
                         term: extractLast( request.term )
                     }, response );
                 },
                 search: function() {
                     // custom minLength
                     var term = extractLast( this.value );
-                    if ( term.length < 2 ) {
+                    if ( term.length < config.term_length ) {
                         return false;
                     }
                 },

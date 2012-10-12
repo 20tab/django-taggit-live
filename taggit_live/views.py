@@ -1,5 +1,4 @@
-from django.http import HttpResponse,Http404
-from django.core import serializers
+from django.http import HttpResponse
 from taggit.models import Tag
 from django.utils.datastructures import MultiValueDictKeyError
 from django.utils import simplejson

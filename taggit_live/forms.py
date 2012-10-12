@@ -1,9 +1,7 @@
 from django import forms
-from django.conf import settings
 from django.utils.safestring import mark_safe
 from taggit.forms import TagField
 from taggit.utils import edit_string_for_tags
-from django.core.urlresolvers import reverse
 
 class TaggitLiveWidget(forms.TextInput):
     class Media:
