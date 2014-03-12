@@ -1,2 +1,2 @@
-include taggit_live/static_taggit_live/js/*
-include taggit_live/static_taggit_live/css/*
+include LICENSE
+recursive-include taggit_live/static *
