@@ -3,6 +3,7 @@ from taggit.models import Tag
 from django.utils.datastructures import MultiValueDictKeyError
 from django.utils import simplejson
 
+
 def taggit_autocomplete_list(request):
     try:
         q_list = request.GET['term'].split(",")
