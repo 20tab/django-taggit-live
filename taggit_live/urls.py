@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, url
 import os
 
 DOC_ROOT = os.path.abspath('taggit_live/static_taggit_live')
