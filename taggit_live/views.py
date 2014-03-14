@@ -1,7 +1,10 @@
 from django.http import HttpResponse
 from taggit.models import Tag
 from django.utils.datastructures import MultiValueDictKeyError
-from django.utils import simplejson
+try:
+    from django.utils import simplejson
+except ImportError:
+    import json as simplejson
 
 
 def taggit_autocomplete_list(request):
