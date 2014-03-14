@@ -13,7 +13,7 @@ def taggit_autocomplete_list(request):
         q = q_list[len(q_list) - 1]
         tags = ["%s" % x for x in Tag.objects.filter(name__istartswith=q).values_list('name', flat=True)]
     except MultiValueDictKeyError,e:
-        print e
+        #print e
         tags = []
         pass
     return HttpResponse(simplejson.dumps(tags))
