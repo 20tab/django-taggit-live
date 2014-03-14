@@ -8,9 +8,9 @@ from taggit.utils import edit_string_for_tags
 class TaggitLiveWidget(forms.TextInput):
 
     class Media:
-        css = {'all': ('/static/taggit_live/css/taggit_live.css',
+        css = {'all': ('taggit_live/css/taggit_live.css',
                        )}
-        js = ('/static/taggit_live/js/taggit_live.js',
+        js = ('taggit_live/js/taggit_live.js',
               )
 
     def render(self, name, value, attrs=None):
