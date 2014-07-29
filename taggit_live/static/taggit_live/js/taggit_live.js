@@ -53,4 +53,4 @@
       
     	});
   	}
-})(jQuery);
+})(jQuery || django.jQuery);
