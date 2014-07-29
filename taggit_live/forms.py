@@ -7,10 +7,8 @@ from taggit.utils import edit_string_for_tags
 class TaggitLiveWidget(forms.TextInput):
 
     class Media:
-        css = {'all': ('/static/taggit_live/css/taggit_live.css',
-                       )}
-        js = ('/static/taggit_live/js/taggit_live.js',
-              )
+        css = {'all': ('/static/taggit_live/css/taggit_live.css',)}
+        js = ('/static/taggit_live/js/taggit_live.js',)
 
     def render(self, name, value, attrs=None):
         if value is not None and not isinstance(value, basestring):
