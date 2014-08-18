@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from django.conf import STATIC_URL
+from django.conf import settings
 from django import forms
 from django.utils.safestring import mark_safe
 from django.core.urlresolvers import reverse
@@ -10,8 +10,8 @@ from taggit.utils import edit_string_for_tags
 class TaggitLiveWidget(forms.TextInput):
 
     class Media:
-        css = {'all': ('{}taggit_live/css/taggit_live.css'.format(STATIC_URL),)}
-        js = ('{}taggit_live/js/taggit_live.js'.format(STATIC_URL),)
+        css = {'all': ('{}taggit_live/css/taggit_live.css'.format(settings.STATIC_URL),)}
+        js = ('{}taggit_live/js/taggit_live.js'.format(settings.STATIC_URL),)
 
     def render(self, name, value, attrs=None):
         if value is not None and not isinstance(value, basestring):
