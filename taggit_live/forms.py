@@ -8,13 +8,20 @@ from taggit.utils import edit_string_for_tags
 
 
 class TaggitLiveWidget(forms.TextInput):
+    def __init__(self, attrs={}):
+        default = {
+            'placeholder': 'A comma-separated list of tags.',
+            'size': '30'
+        }
+        attrs.update(default)
+        super(TaggitLiveWidget, self).__init__(attrs)
 
     class Media:
         css = {'all': ('{}taggit_live/css/taggit_live.css'.format(settings.STATIC_URL),)}
         js = ('{}taggit_live/js/taggit_live.js'.format(settings.STATIC_URL),)
 
     def render(self, name, value, attrs=None):
-        if value is not None and not isinstance(value, basestring):
+        if value is not None:
             value = edit_string_for_tags([o.tag for o in value.select_related("tag")])
         rendered = super(TaggitLiveWidget, self).render(name, value, attrs)
         url = reverse("taggit_autocomplete_list")
